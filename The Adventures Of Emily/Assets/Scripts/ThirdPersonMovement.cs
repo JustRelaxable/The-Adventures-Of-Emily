@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class ThirdPersonMovement : MonoBehaviour
 {
+    [SerializeField]
+    Animator animator;
     public event Action OnCharacterLandedAfterDoubleJump;
     private CharacterController characterController;
     [SerializeField]
@@ -66,6 +68,11 @@ public class ThirdPersonMovement : MonoBehaviour
         if (direction.magnitude <= 0.1f)
         {
             moveDir = Vector3.zero;
+            animator.SetBool("Running", false);
+        }
+        else
+        {
+            animator.SetBool("Running", true);
         }
 
         if (characterController.isGrounded)
@@ -92,6 +99,7 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             if (!firstJump && !secondJump)
             {
+                animator.SetTrigger("Jump");
                 print("fisrt jump");
                 vSpeed = jumpForce;
                 firstJump = true;
@@ -99,6 +107,7 @@ public class ThirdPersonMovement : MonoBehaviour
             else if (firstJump && !secondJump)
             {
                 print("second jump");
+                animator.SetTrigger("Jump");
                 vSpeed = jumpForce;
                 secondJump = true;
             }
