@@ -275,7 +275,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 86594778}
-  m_LocalRotation: {x: 0.12684143, y: -0.000000017067407, z: 0.000000002182482, w: 0.99192303}
+  m_LocalRotation: {x: 0.12684143, y: 0.000000017067407, z: -0.000000002182482, w: 0.99192303}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -1078,11 +1078,11 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.75
+  m_Height: 1.87
   m_Radius: 0.32
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.032
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0.95, z: 0}
 --- !u!4 &632029149 stripped
@@ -1105,7 +1105,9 @@ MonoBehaviour:
   speed: 6
   lockCursor: 1
   turnSmoothTime: 0.1
-  jumpForce: 1.5
+  jumpForce: 3
+  gravityMultiplier: 0.005
+  soarSpeed: 0.2
   cam: {fileID: 1360446562}
 --- !u!1001 &835699182
 PrefabInstance:
@@ -1352,7 +1354,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 849896901}
-  m_LocalRotation: {x: 0.09072615, y: -0.00000001766279, z: 0.0000000016091131, w: 0.9958759}
+  m_LocalRotation: {x: 0.09072615, y: 0.000000017662783, z: -0.0000000016091125, w: 0.9958759}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2395,7 +2397,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1360446559}
-  m_LocalRotation: {x: 0.10877785, y: 8.244629e-10, z: 9.0245124e-11, w: 0.9940661}
+  m_LocalRotation: {x: 0.10877785, y: -8.2446283e-10, z: -9.024563e-11, w: 0.9940661}
   m_LocalPosition: {x: 0, y: 2.5, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
