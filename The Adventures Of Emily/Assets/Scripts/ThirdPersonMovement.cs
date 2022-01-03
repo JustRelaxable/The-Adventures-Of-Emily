@@ -77,7 +77,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (characterController.isGrounded)
         {
-            //vSpeed = -0.01f;
+            vSpeed = -0f;
             print("character grounderd");
             firstJump = false;
         }
@@ -85,11 +85,11 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             if(Input.GetKey(KeyCode.Space) && vSpeed <= 0)
             {
-                vSpeed = -soarSpeed;
+                vSpeed = -soarSpeed * Time.deltaTime;
             }
             else
             {
-                vSpeed -= gravity * gravityMultiplier;
+                vSpeed -= gravity * gravityMultiplier * Time.deltaTime;
                 print("character not grounded");
             }
         }
