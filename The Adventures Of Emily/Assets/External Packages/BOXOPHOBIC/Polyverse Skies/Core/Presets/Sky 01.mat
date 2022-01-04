@@ -10,10 +10,10 @@ Material:
   m_Name: Sky 01
   m_Shader: {fileID: 4800000, guid: 6fc9318f5193c094c98c0d450cd61e3b, type: 3}
   m_ShaderKeywords: _BUILTINFOG_ON _CLOUDS_ON _ENABLECLOUDSROTATION_ON _ENABLECLOUDS_ON
-    _ENABLEPATTERNOVERLAY_ON _ENABLEPATTERN_ON _ENABLESKYPATTERNOVERLAY_ON _ENABLESTARSSUNMASK_ON
-    _ENABLESTARSTWINKLING_ON _ENABLESTARS_ON _ENABLESUNMASK_ON _ENABLESUNMOONMASK_ON
-    _ENABLESUNMOON_ON _ENABLESUN_ON _ENABLETWINKLING_ON _PATTERNOVERLAY_ON _STARS_ON
-    _SUNORMOON_ON _USECUBEMAP_ON _USEENVIRONMENTGRADIENT_ON _USESKYPATTERNOVERLAY_ON
+    _ENABLEMOON_ON _ENABLEPATTERNOVERLAY_ON _ENABLEPATTERN_ON _ENABLESKYPATTERNOVERLAY_ON
+    _ENABLESTARSSUNMASK_ON _ENABLESTARSTWINKLING_ON _ENABLESTARS_ON _ENABLESUNMASK_ON
+    _ENABLESUNMOONMASK_ON _ENABLESUNMOON_ON _ENABLETWINKLING_ON _PATTERNOVERLAY_ON
+    _STARS_ON _SUNORMOON_ON _USECUBEMAP_ON _USEENVIRONMENTGRADIENT_ON _USESKYPATTERNOVERLAY_ON
     _USETEXTURE_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
@@ -69,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MoonTexture:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
@@ -173,7 +173,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _BackgroundExposure: 1
+    - _BackgroundExposure: 1.04
     - _BackgroundMode: 0
     - _BuiltInFog: 1
     - _BumpScale: 1
@@ -198,7 +198,7 @@ Material:
     - _EnableClouds: 1
     - _EnableCloudsRotation: 1
     - _EnableDirectionLight: 0
-    - _EnableMoon: 0
+    - _EnableMoon: 1
     - _EnablePattern: 1
     - _EnablePatternOverlay: 1
     - _EnableSkyPatternOverlay: 1
@@ -207,7 +207,7 @@ Material:
     - _EnableStarsRotation: 0
     - _EnableStarsSunMask: 1
     - _EnableStarsTwinkling: 1
-    - _EnableSun: 1
+    - _EnableSun: 0
     - _EnableSunMask: 1
     - _EnableSunMoon: 1
     - _EnableSunMoonMask: 1
@@ -226,10 +226,10 @@ Material:
     - _Float5: -0.2
     - _Float6: 0.01
     - _FogCat: 1
-    - _FogFill: 0
-    - _FogHeight: 0
+    - _FogFill: 0.567
+    - _FogHeight: 0.008
     - _FogIntensity: 0.518
-    - _FogSmoothness: 0.01
+    - _FogSmoothness: 0.792
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -238,7 +238,7 @@ Material:
     - _Mode: 0
     - _MoonCat: 1
     - _MoonIntensity: 1
-    - _MoonSize: 0.5
+    - _MoonSize: 0.425
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PatternCat: 1
@@ -315,3 +315,4 @@ Material:
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0, g: 1, b: 1, a: 0}
     - _water: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []

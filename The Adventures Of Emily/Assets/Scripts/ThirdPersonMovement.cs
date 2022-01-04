@@ -26,6 +26,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField]
     private float gravityMultiplier = 0.5f;
     private float gravity = 9.81f;
+    public bool landing = false;
 
     [SerializeField]
     private float soarSpeed = 1f;
@@ -57,7 +58,11 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        Vector3 direction = new Vector3(horizontal, 0f, vertical);
+        Vector3 direction;
+        if (!landing)
+            direction = new Vector3(horizontal, 0f, vertical);
+        else
+            direction = Vector3.zero;
 
         float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
@@ -80,15 +85,19 @@ public class ThirdPersonMovement : MonoBehaviour
             vSpeed = -0f;
             print("character grounderd");
             firstJump = false;
+            animator.SetBool("IsGrounded", true);
         }
         else
         {
+            animator.SetBool("IsGrounded", false);
             if(Input.GetKey(KeyCode.Space) && vSpeed <= 0)
             {
                 vSpeed = -soarSpeed * Time.deltaTime;
+                animator.SetBool("SpaceDown", true);
             }
             else
             {
+                animator.SetBool("SpaceDown", false);
                 vSpeed -= gravity * gravityMultiplier * Time.deltaTime;
                 print("character not grounded");
             }
@@ -116,7 +125,10 @@ public class ThirdPersonMovement : MonoBehaviour
         moveDir.y = vSpeed;
         characterController.Move(moveDir * speed * Time.deltaTime);
 
-
+        if (Input.GetMouseButtonDown(0))
+        {
+            animator.SetTrigger("AttackTest");
+        }
 
 
         if (!previousGroundedStatus && secondJump && characterController.isGrounded)
@@ -124,6 +136,7 @@ public class ThirdPersonMovement : MonoBehaviour
             OnCharacterLandedAfterDoubleJump?.Invoke();
         }
         previousGroundedStatus = characterController.isGrounded;
+        animator.SetFloat("vSpeed", vSpeed);
     }
 
 
