@@ -66,6 +66,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
         float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg + cam.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
+        animator.SetFloat("TurnSmoothVelocity", turnSmoothVelocity);
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
 
         Vector3 moveDir = Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward;
@@ -83,7 +84,7 @@ public class ThirdPersonMovement : MonoBehaviour
         if (characterController.isGrounded)
         {
             vSpeed = -0f;
-            print("character grounderd");
+            //print("character grounderd");
             firstJump = false;
             animator.SetBool("IsGrounded", true);
         }
@@ -99,7 +100,7 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 animator.SetBool("SpaceDown", false);
                 vSpeed -= gravity * gravityMultiplier * Time.deltaTime;
-                print("character not grounded");
+                //print("character not grounded");
             }
         }
 
@@ -109,13 +110,13 @@ public class ThirdPersonMovement : MonoBehaviour
             if (!firstJump && !secondJump)
             {
                 animator.SetTrigger("Jump");
-                print("fisrt jump");
+                //print("fisrt jump");
                 vSpeed = jumpForce;
                 firstJump = true;
             }
             else if (firstJump && !secondJump)
             {
-                print("second jump");
+                //print("second jump");
                 animator.SetTrigger("Jump");
                 vSpeed = jumpForce;
                 secondJump = true;
