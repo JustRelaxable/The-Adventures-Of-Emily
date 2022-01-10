@@ -59,7 +59,7 @@ public class ThirdPersonMovement : MonoBehaviour
             }
             else
             {
-                vSpeed -= GRAVITY * gravityMultiplier;
+                vSpeed -= GRAVITY * gravityMultiplier * Time.deltaTime;
             }
         }
 
