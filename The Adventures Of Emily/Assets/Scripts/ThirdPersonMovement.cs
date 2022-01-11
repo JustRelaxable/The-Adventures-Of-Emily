@@ -51,7 +51,7 @@ public class ThirdPersonMovement : MonoBehaviour
         Vector3 moveDir = characterDirection != Vector3.zero ? Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward : Vector3.zero;
         timePassedSinceLastJump += Time.deltaTime;
 
-        if(!IsGrounded)
+        if (!IsGrounded)
         {
             if (thirdPersonInput.JumpHold && VerticalSpeed <= 0)
             {
