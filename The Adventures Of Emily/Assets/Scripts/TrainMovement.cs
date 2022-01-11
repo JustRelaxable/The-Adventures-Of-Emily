@@ -38,11 +38,11 @@ public class TrainMovement : MonoBehaviour
         float time = 0;
         float duration = 3;
         
-        while (Vector3.Distance(end.position,transform.position) > Time.deltaTime * speed)
+        while (Vector3.Distance(end.position,transform.position) > Time.fixedDeltaTime * speed)
         {
             //rigidbody.MovePosition(Vector3.Lerp(start.position, end.position, (time / duration)));
-            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, end.position, Time.deltaTime*speed));
-            rigidbody.MoveRotation(Quaternion.RotateTowards(transform.rotation, end.rotation, Time.deltaTime*speed*30));
+            rigidbody.MovePosition(Vector3.MoveTowards(transform.position, end.position, Time.fixedDeltaTime*speed));
+            rigidbody.MoveRotation(Quaternion.RotateTowards(transform.rotation, end.rotation, Time.fixedDeltaTime*speed*30));
             //time += Time.deltaTime;
             yield return null;
         }
