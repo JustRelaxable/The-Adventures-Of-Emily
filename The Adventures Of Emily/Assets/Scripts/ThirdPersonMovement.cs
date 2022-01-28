@@ -89,5 +89,9 @@ public class ThirdPersonMovement : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        Debug.Log("X");
+    }
 
 }
