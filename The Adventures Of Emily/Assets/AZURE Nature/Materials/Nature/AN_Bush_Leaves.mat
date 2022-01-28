@@ -134,7 +134,7 @@ Material:
     - _UVSec: 0
     - _WIND: 1
     - _Wind: 1
-    - _WindForce: 0.1
+    - _WindForce: 0.02
     - _WindSpeed: 0.15
     - _WindWavesScale: 0.85
     - _ZWrite: 1
@@ -145,3 +145,4 @@ Material:
     - _Color2: {r: 0.3715646, g: 0.67058825, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SnowColor: {r: 1, g: 0.7400185, b: 0, a: 0}
+  m_BuildTextureStacks: []
