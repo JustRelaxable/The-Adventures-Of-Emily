@@ -12,11 +12,18 @@ public class TerrainFootSteps : MonoBehaviour
     private AudioSource audioSource;
     private TerrainTextureData terrainTextureData;
 
+    [SerializeField] EmilyAnimator emilyAnimator;
     [SerializeField] LayerMask layerMask;
 
     private void Awake()
     {
+        emilyAnimator.OnStepped += EmilyAnimator_OnStepped;
         audioSource = GetComponent<AudioSource>();
+    }
+
+    private void EmilyAnimator_OnStepped()
+    {
+        Step();
     }
 
     private void Step()
@@ -41,18 +48,14 @@ public class TerrainFootSteps : MonoBehaviour
     {
         int terrainTextureIndex = terrainTextureData.GetActiveTerrainTextureIdx(transform.position);
         Debug.Log(terrainTextureIndex);
-        return null;
-        /*
         switch (terrainTextureIndex)
         {
             case 0:
                 return stoneClips[UnityEngine.Random.Range(0, stoneClips.Length)];
             case 1:
                 return mudClips[UnityEngine.Random.Range(0, mudClips.Length)];
-            case 2:
             default:
                 return grassClips[UnityEngine.Random.Range(0, grassClips.Length)];
         }
-        */
     }
 }

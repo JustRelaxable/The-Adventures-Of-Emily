@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -6,7 +7,7 @@ public class EmilyAnimator : MonoBehaviour
 {
     [SerializeField] private ThirdPersonMovement emilyMovement;
     [SerializeField] private ThirdPersonInput thirdPersonInput;
-
+    public event Action OnStepped;
     private Animator animator;
  
     private void Awake()
@@ -66,5 +67,10 @@ public class EmilyAnimator : MonoBehaviour
         {
             animator.SetBool("Running", true);
         }
+    }
+
+    private void TriggerOnStepped()
+    {
+        OnStepped?.Invoke();
     }
 }
