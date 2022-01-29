@@ -48,15 +48,22 @@ public class EmilySoundController : MonoBehaviour
 
     private AudioClip GetRandomStepClip()
     {
-        int terrainTextureIndex = terrainTextureData.GetActiveTerrainTextureIdx(transform.position);
-        switch (terrainTextureIndex)
+        try
         {
-            case 0:
-                return grassClips[UnityEngine.Random.Range(0, grassClips.Length)];
-            case 1:
-                return stoneClips[UnityEngine.Random.Range(0, stoneClips.Length)];
-            default:
-                return null;
+            int terrainTextureIndex = terrainTextureData.GetActiveTerrainTextureIdx(transform.position);
+            switch (terrainTextureIndex)
+            {
+                case 0:
+                    return grassClips[UnityEngine.Random.Range(0, grassClips.Length)];
+                case 1:
+                    return stoneClips[UnityEngine.Random.Range(0, stoneClips.Length)];
+                default:
+                    return null;
+            }
+        }
+        catch (System.Exception)
+        {
+            return null;
         }
     }
 
