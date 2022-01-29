@@ -69,7 +69,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MoonTexture:
-        m_Texture: {fileID: 2800000, guid: e80870b385adcae48871133b9b5759dd, type: 3}
+        m_Texture: {fileID: 2800000, guid: 16d300134c867234588aeecccb9392b9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Normal:
@@ -237,8 +237,8 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _MoonCat: 1
-    - _MoonIntensity: 1
-    - _MoonSize: 0.425
+    - _MoonIntensity: 6
+    - _MoonSize: 0.373
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PatternCat: 1
