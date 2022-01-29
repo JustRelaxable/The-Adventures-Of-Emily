@@ -169,7 +169,7 @@ namespace PolyverseSkies
 
                 byte[] imgBytes = img.EncodeToPNG();
                 File.WriteAllBytes(path, imgBytes);
-
+                /*
                 AssetDatabase.ImportAsset(path, ImportAssetOptions.ForceUpdate);
 
                 TextureImporter texImporter = AssetImporter.GetAtPath(path) as TextureImporter;
@@ -191,6 +191,7 @@ namespace PolyverseSkies
                 Debug.Log("[Polyverse Skies] The Generated Cubemap is saved to the Assets folder!");
 
                 generateCubemap = false;
+                */
             }
         }
     }
