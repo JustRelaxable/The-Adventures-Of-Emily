@@ -106,7 +106,7 @@ Material:
     - _TransNormalDistortion: 0
     - _TransScattering: 1
     - _TransShadow: 1
-    - _TransStrength: 2
+    - _TransStrength: 0.2
     - _Translucency: 2
     - _TransmissionShadow: 0.5
     - _UVSec: 0
