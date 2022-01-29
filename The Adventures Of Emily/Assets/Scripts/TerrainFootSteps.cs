@@ -5,8 +5,6 @@ public class TerrainFootSteps : MonoBehaviour
     [SerializeField]
     private AudioClip[] stoneClips;
     [SerializeField]
-    private AudioClip[] mudClips;
-    [SerializeField]
     private AudioClip[] grassClips;
 
     private AudioSource audioSource;
@@ -47,15 +45,14 @@ public class TerrainFootSteps : MonoBehaviour
     private AudioClip GetRandomClip()
     {
         int terrainTextureIndex = terrainTextureData.GetActiveTerrainTextureIdx(transform.position);
-        Debug.Log(terrainTextureIndex);
         switch (terrainTextureIndex)
         {
             case 0:
-                return stoneClips[UnityEngine.Random.Range(0, stoneClips.Length)];
-            case 1:
-                return mudClips[UnityEngine.Random.Range(0, mudClips.Length)];
-            default:
                 return grassClips[UnityEngine.Random.Range(0, grassClips.Length)];
+            case 1:
+                return stoneClips[UnityEngine.Random.Range(0, stoneClips.Length)];
+            default:
+                return null;
         }
     }
 }
