@@ -5898,7 +5898,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1b74ed5697e6d0a4fab1764269645630, type: 3}
   - {fileID: 8300000, guid: 39f9cfb2d3a794a45aec74dfc2788516, type: 3}
   - {fileID: 8300000, guid: 1a21a4a7fbd79d34fb6f6718c5ac9f57, type: 3}
+  jumpClips:
+  - {fileID: 8300000, guid: c7edf8e3bae22354c9ab7b060d64594a, type: 3}
   emilyAnimator: {fileID: 87711529}
+  thirdPersonMovement: {fileID: 439714908}
   layerMask:
     serializedVersion: 2
     m_Bits: 256
@@ -17323,11 +17326,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282184794082, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000019081936
+      value: -0.00000001908194
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282184794082, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000024400888
+      value: 0.0000000024400892
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282528796409, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalPosition.y

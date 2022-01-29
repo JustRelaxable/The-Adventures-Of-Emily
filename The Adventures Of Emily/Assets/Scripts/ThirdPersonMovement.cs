@@ -28,7 +28,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public bool FirstJump { get => firstJump; }
     public bool SecondJump { get => secondJump; }
 
-
+    public event Action OnJump;
 
     private void Awake()
     {
@@ -81,11 +81,13 @@ public class ThirdPersonMovement : MonoBehaviour
             vSpeed = jumpForce;
             firstJump = true;
             timePassedSinceLastJump = 0f;
+            OnJump?.Invoke();
         }
         else if (firstJump && !secondJump)
         {
             vSpeed = jumpForce;
             secondJump = true;
+            OnJump?.Invoke();
         }
     }
 

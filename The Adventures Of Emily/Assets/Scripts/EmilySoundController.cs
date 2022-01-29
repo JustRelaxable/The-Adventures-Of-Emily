@@ -1,32 +1,37 @@
 using UnityEngine;
 
-public class TerrainFootSteps : MonoBehaviour
+public class EmilySoundController : MonoBehaviour
 {
     [SerializeField]
     private AudioClip[] stoneClips;
     [SerializeField]
     private AudioClip[] grassClips;
+    [SerializeField]
+    private AudioClip[] jumpClips;
 
     private AudioSource audioSource;
     private TerrainTextureData terrainTextureData;
 
     [SerializeField] EmilyAnimator emilyAnimator;
+    [SerializeField] ThirdPersonMovement thirdPersonMovement;
     [SerializeField] LayerMask layerMask;
 
     private void Awake()
     {
         emilyAnimator.OnStepped += EmilyAnimator_OnStepped;
         audioSource = GetComponent<AudioSource>();
+        thirdPersonMovement.OnJump += ThirdPersonMovement_OnJump;
+    }
+
+    private void ThirdPersonMovement_OnJump()
+    {
+        AudioClip clip = GetRandomJumpClip();
+        audioSource.PlayOneShot(clip);
     }
 
     private void EmilyAnimator_OnStepped()
     {
-        Step();
-    }
-
-    private void Step()
-    {
-        AudioClip clip = GetRandomClip();
+        AudioClip clip = GetRandomStepClip();
         audioSource.PlayOneShot(clip);
     }
 
@@ -41,7 +46,7 @@ public class TerrainFootSteps : MonoBehaviour
         }
     }
 
-    private AudioClip GetRandomClip()
+    private AudioClip GetRandomStepClip()
     {
         int terrainTextureIndex = terrainTextureData.GetActiveTerrainTextureIdx(transform.position);
         switch (terrainTextureIndex)
@@ -53,5 +58,10 @@ public class TerrainFootSteps : MonoBehaviour
             default:
                 return null;
         }
+    }
+
+    private AudioClip GetRandomJumpClip()
+    {
+        return jumpClips[UnityEngine.Random.Range(0, jumpClips.Length)];
     }
 }
