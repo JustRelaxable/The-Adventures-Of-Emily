@@ -17,6 +17,9 @@ public class ObjectivePrefab : MonoBehaviour
     public void UpdateUI()
     {
         objectiveText.text = objective.ObjectiveText;
-
+        if (objective.ObjectiveCompleted)
+        {
+            tickImage.gameObject.SetActive(true);
+        }
     }
 }

@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectiveText: {fileID: 8956208600896938519}
-  tickImage: {fileID: 4834564614759647980}
+  tickImage: {fileID: 7110799457954841497}
 --- !u!1 &3299692019620202786
 GameObject:
   m_ObjectHideFlags: 0
