@@ -4,20 +4,35 @@ using UnityEngine;
 
 public class ObjectiveUI : MonoBehaviour
 {
-    public Stack<Objective> objectives = new Stack<Objective>();
+    public List<Objective> objectives = new List<Objective>();
+    public GameObject objectivePrefab;
+
+    private void Start()
+    {
+        UpdateUI();
+    }
 
     public void AddObjective(Objective objective)
     {
-        objectives.Push(objective);
+        objectives.Add(objective);
     }
 
     public void AddObjective(string text,bool isCompleted)
     {
-        objectives.Push(new Objective(text, isCompleted));
+        objectives.Add(new Objective(text, isCompleted));
     }
 
     public void UpdateUI()
     {
-
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
+        for (int i = 0; i < objectives.Count; i++)
+        {
+            GameObject go = Instantiate(objectivePrefab, transform);
+            go.GetComponent<ObjectivePrefab>().LoadObjective(objectives[i]);
+            go.GetComponent<ObjectivePrefab>().UpdateUI();
+        }
     }
 }
