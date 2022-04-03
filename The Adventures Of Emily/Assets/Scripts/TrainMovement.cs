@@ -28,7 +28,6 @@ public class TrainMovement : MonoBehaviour
         }
 
         currentNode = currentNode.nextNode;
-        Debug.Log(currentNode.gameObject.name);
         if (currentNode == null)
             yield break;
         yield return StartTrain();
