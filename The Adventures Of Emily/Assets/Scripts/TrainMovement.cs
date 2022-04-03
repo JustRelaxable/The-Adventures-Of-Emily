@@ -28,6 +28,7 @@ public class TrainMovement : MonoBehaviour
         }
 
         currentNode = currentNode.nextNode;
+        Debug.Log(currentNode.gameObject.name);
         if (currentNode == null)
             yield break;
         yield return StartTrain();
@@ -42,7 +43,7 @@ public class TrainMovement : MonoBehaviour
         {
             //rigidbody.MovePosition(Vector3.Lerp(start.position, end.position, (time / duration)));
             rigidbody.MovePosition(Vector3.MoveTowards(transform.position, end.position, Time.fixedDeltaTime*speed));
-            //rigidbody.MoveRotation(Quaternion.RotateTowards(transform.rotation, end.rotation, Time.fixedDeltaTime*speed*30));
+            rigidbody.MoveRotation(Quaternion.RotateTowards(transform.rotation, end.rotation, Time.fixedDeltaTime*speed*30));
             //time += Time.deltaTime;
             yield return null;
         }
