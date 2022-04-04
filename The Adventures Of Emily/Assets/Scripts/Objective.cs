@@ -9,12 +9,12 @@ public class Objective
     [SerializeField] bool isObjectiveCompleted;
     public string ObjectiveText { get => objectiveText; set => objectiveText = value; }
     public bool ObjectiveCompleted { get => isObjectiveCompleted; set => isObjectiveCompleted = value; }
-    public List<Objective> SubObjectives { get; set; }
+    //public List<Objective> SubObjectives { get; set; }
 
     public Objective(string text, bool isCompleted)
     {
         ObjectiveText = text;
         ObjectiveCompleted = isCompleted;
-        SubObjectives = new List<Objective>();
+        //SubObjectives = new List<Objective>();
     }
 }

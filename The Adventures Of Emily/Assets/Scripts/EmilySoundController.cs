@@ -32,7 +32,8 @@ public class EmilySoundController : MonoBehaviour
     private void EmilyAnimator_OnStepped()
     {
         AudioClip clip = GetRandomStepClip();
-        audioSource.PlayOneShot(clip);
+        if(clip)
+            audioSource.PlayOneShot(clip);
     }
 
     private void Update()
