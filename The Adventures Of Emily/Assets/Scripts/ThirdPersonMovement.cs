@@ -27,6 +27,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public float VerticalSpeed { get => vSpeed; }
     public bool FirstJump { get => firstJump; }
     public bool SecondJump { get => secondJump; }
+    public float JumpForce { get => jumpForce; set=> jumpForce = value; }
 
     public event Action OnJump;
 
