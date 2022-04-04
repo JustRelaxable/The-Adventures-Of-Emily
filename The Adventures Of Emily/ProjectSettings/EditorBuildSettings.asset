@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Backyard/Tutorial-Upd.unity
     guid: d3f9b9a57aedade48ae02237d826f0fa
+  - enabled: 1
+    path: Assets/Scenes/Giant_Room_Model.unity
+    guid: 9345ee9cc0d2bf7408e3a9764e51ddf0
   m_configObjects: {}
