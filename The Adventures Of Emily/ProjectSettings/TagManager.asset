@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Train
   - Ball
+  - Projectile
   layers:
   - Default
   - TransparentFX

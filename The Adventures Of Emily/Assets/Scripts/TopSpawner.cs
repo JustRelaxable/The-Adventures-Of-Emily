@@ -24,7 +24,7 @@ public class TopSpawner : MonoBehaviour
                 var top = Spawn();
                 top.transform.position = transform.position;
                 top.GetComponent<Rigidbody>().AddForce(Vector3.right * Random.Range(200f,350f));
-                Destroy(top, 10);
+                Destroy(top, 20);
                 time = 0f;
                 duration = Random.Range(3f, 10f);
             }
