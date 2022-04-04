@@ -23,14 +23,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7880947401812068292}
-  m_LocalRotation: {x: 0.50000006, y: -0.49999994, z: 0.49999997, w: 0.50000006}
+  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 108.8, y: 4.49, z: 110.93}
   m_LocalScale: {x: 63.14, y: 63.14, z: 134.9428}
   m_Children:
   - {fileID: 8811007545649072617}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
 --- !u!1001 &9064696924292935170
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -94,14 +94,37 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: cab77628781be6b4288828575fc7a07b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 55355e583c75aaf4281121b3eb6a19cb, type: 2}
     - target: {fileID: 919132149155446097, guid: cab77628781be6b4288828575fc7a07b, type: 3}
       propertyPath: m_Name
       value: oyun-fence
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cab77628781be6b4288828575fc7a07b, type: 3}
+--- !u!1 &8146215690450457427 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cab77628781be6b4288828575fc7a07b, type: 3}
+  m_PrefabInstance: {fileID: 9064696924292935170}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8811007545649072617 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: cab77628781be6b4288828575fc7a07b, type: 3}
   m_PrefabInstance: {fileID: 9064696924292935170}
   m_PrefabAsset: {fileID: 0}
+--- !u!64 &1264508470
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8146215690450457427}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -8374827716699047853, guid: cab77628781be6b4288828575fc7a07b, type: 3}
