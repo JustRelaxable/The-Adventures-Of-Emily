@@ -1572,4 +1572,18 @@ AnimationClip:
     script: {fileID: 0}
   m_HasGenericRootTransform: 1
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 7.95
+    functionName: PlayOneShotSound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: 06ec32170a4fc414e82f8c4eee0d371a, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 17.4
+    functionName: PlayOneShotSound
+    data: 
+    objectReferenceParameter: {fileID: 8300000, guid: f4ac4bc2224ff9b4493e73731729767c, type: 3}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
