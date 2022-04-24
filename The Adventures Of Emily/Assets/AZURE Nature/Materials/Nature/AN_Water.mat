@@ -67,12 +67,12 @@ Material:
     - _FoamDistance: 0.35
     - _FoamOpacity: 1
     - _Normal: 0.15
-    - _Opacity: 1
+    - _Opacity: 0.377
     - _Power: 0.2
     - _RefractionIntensity: 0.15
     - _RefractionScale: 0.2
     - _Scale: 50
-    - _Smoothness: 0.88
+    - _Smoothness: 1
     - _TessEdgeLength: 16
     - _TessMax: 25
     - _TessMaxDisp: 25
@@ -90,8 +90,8 @@ Material:
     - _TransmissionShadow: 0.5
     - _UDepthDistance: 0.3
     - _UDistancePower: 0.1
-    - _WavesNormalIntensity: 0.35
-    - _WavesSpeed: 0.1
+    - _WavesNormalIntensity: 1.26
+    - _WavesSpeed: 0.175
     - _WavesTile: 0.15
     - __dirty: 0
     m_Colors:
@@ -103,3 +103,4 @@ Material:
     - _NormalScale: {r: 2, g: 2, b: 0, a: 0}
     - _Vector0: {r: 1, g: 1, b: 1, a: 0}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []

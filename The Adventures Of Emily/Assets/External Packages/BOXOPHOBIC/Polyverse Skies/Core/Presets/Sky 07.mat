@@ -11,10 +11,9 @@ Material:
   m_Shader: {fileID: 4800000, guid: 6fc9318f5193c094c98c0d450cd61e3b, type: 3}
   m_ShaderKeywords: _BUILTINFOG_ON _CLOUDS_ON _ENABLECLOUDSROTATION_ON _ENABLECLOUDS_ON
     _ENABLEPATTERNOVERLAY_ON _ENABLEPATTERN_ON _ENABLESKYPATTERNOVERLAY_ON _ENABLESTARSSUNMASK_ON
-    _ENABLESTARSTWINKLING_ON _ENABLESTARS_ON _ENABLESUNMASK_ON _ENABLESUNMOONMASK_ON
-    _ENABLESUNMOON_ON _ENABLESUN_ON _ENABLETWINKLING_ON _PATTERNOVERLAY_ON _STARS_ON
-    _SUNORMOON_ON _USECUBEMAP_ON _USEENVIRONMENTGRADIENT_ON _USESKYPATTERNOVERLAY_ON
-    _USETEXTURE_ON
+    _ENABLESTARSTWINKLING_ON _ENABLESUNMASK_ON _ENABLESUNMOONMASK_ON _ENABLESUNMOON_ON
+    _ENABLESUN_ON _ENABLETWINKLING_ON _PATTERNOVERLAY_ON _STARS_ON _SUNORMOON_ON
+    _USECUBEMAP_ON _USEENVIRONMENTGRADIENT_ON _USESKYPATTERNOVERLAY_ON _USETEXTURE_ON
   m_LightmapFlags: 0
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -202,7 +201,7 @@ Material:
     - _EnablePattern: 1
     - _EnablePatternOverlay: 1
     - _EnableSkyPatternOverlay: 1
-    - _EnableStars: 1
+    - _EnableStars: 0
     - _EnableStarsHeightMask: 0
     - _EnableStarsRotation: 0
     - _EnableStarsSunMask: 1
@@ -213,8 +212,8 @@ Material:
     - _EnableSunMoonMask: 1
     - _EnableTwinkling: 1
     - _EqHeight: 0.419
-    - _EquatorHeight: 0.7
-    - _EquatorSmoothness: 0.8
+    - _EquatorHeight: 1
+    - _EquatorSmoothness: 0.623
     - _Exposure: 0
     - _Fade: 0
     - _Float0: -1
@@ -242,7 +241,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PatternCat: 1
-    - _PatternContrast: 0.3
+    - _PatternContrast: 0.28
     - _PatternOverlay: 1
     - _RoatationSpeed: 0.4
     - _Rotation: 0
@@ -304,7 +303,7 @@ Material:
     - _Color2: {r: 0.059472326, g: 0.25068596, b: 0.8088235, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Eq: {r: 1, g: 0.6769777, b: 0.330882, a: 0}
-    - _EquatorColor: {r: 0.9533642, g: 0.9811321, b: 0.5507298, a: 1}
+    - _EquatorColor: {r: 0.94447863, g: 0.9528302, b: 0.8215913, a: 1}
     - _Ground: {r: 0.4779411, g: 0.43111518, b: 0.23545504, a: 0}
     - _GroundColor: {r: 0.30588236, g: 0.53333336, b: 0.6117647, a: 1}
     - _MoonColor: {r: 1, g: 1, b: 1, a: 1}
@@ -315,3 +314,4 @@ Material:
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0, g: 1, b: 1, a: 0}
     - _water: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []
