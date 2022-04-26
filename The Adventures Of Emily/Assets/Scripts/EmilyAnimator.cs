@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class EmilyAnimator : MonoBehaviour
 {
+    public GameObject TargetGameObject { get; set; }
+
     [SerializeField] private ThirdPersonMovement emilyMovement;
     [SerializeField] private ThirdPersonInput thirdPersonInput;
     public event Action OnStepped;
@@ -72,5 +74,17 @@ public class EmilyAnimator : MonoBehaviour
     private void TriggerOnStepped()
     {
         OnStepped?.Invoke();
+    }
+
+    public void SetBool(string boolKey,bool value)
+    {
+        animator.SetBool(boolKey, value);
+    }
+
+    public void PickUp()
+    {
+        TargetGameObject.GetComponent<Collider>().enabled = false;
+        animator.SetBool("Pickable", false);
+        GetComponent<EmilyObjectHoldController>().HoldObject(TargetGameObject);
     }
 }
