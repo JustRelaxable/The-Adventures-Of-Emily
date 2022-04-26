@@ -20,6 +20,8 @@ public class ThirdPersonMovement : MonoBehaviour
     private bool firstJump, secondJump = false;
     private const float GRAVITY = 9.81f;
     private Vector3 characterDirection;
+    private Vector3 lastMoveDirection;
+    private Vector3 moveDir;
 
     public float TurnSmoothVelocity { get => turnSmoothVelocity; }
     public Vector3 CharacterDirection { get => characterDirection; }
@@ -31,6 +33,7 @@ public class ThirdPersonMovement : MonoBehaviour
 
     public event Action OnJump;
 
+    public bool onIce = false;
     private void Awake()
     {
         thirdPersonInput = GetComponent<ThirdPersonInput>();
@@ -49,7 +52,7 @@ public class ThirdPersonMovement : MonoBehaviour
         float targetAngle = Mathf.Atan2(characterDirection.x, characterDirection.z) * Mathf.Rad2Deg + thirdPersonCamera.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
         transform.rotation = Quaternion.Euler(0f, angle, 0f);
-        Vector3 moveDir = characterDirection != Vector3.zero ? Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward : Vector3.zero;
+        moveDir = characterDirection != Vector3.zero ? Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward : Vector3.zero;
         timePassedSinceLastJump += Time.deltaTime;
 
         if (!IsGrounded)
@@ -68,6 +71,12 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             firstJump = false;
             secondJump = false;
+        }
+
+        if (onIce)
+        {
+            characterController.Move(lastMoveDirection.normalized * speed * Time.deltaTime);
+            return;
         }
 
         moveDir.y = vSpeed;
@@ -94,7 +103,10 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("X");
     }
 
+    public void OnEnterIce()
+    {
+        lastMoveDirection = moveDir;
+    }
 }
