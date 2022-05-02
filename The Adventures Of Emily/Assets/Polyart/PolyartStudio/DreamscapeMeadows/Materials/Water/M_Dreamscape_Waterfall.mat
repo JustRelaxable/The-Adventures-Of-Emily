@@ -90,7 +90,7 @@ Material:
     - _LinesSpeed: -0.63
     - _LinesSpeed2: 0.6
     - _RippleSpeed: 2
-    - _Smoothness: 1
+    - _Smoothness: 0.6
     - _Smoothness1: 1
     - _UVFade: -0.65
     - _VoronoiSpeed: 2.3
@@ -107,3 +107,4 @@ Material:
     - _DisplacementMovement: {r: 0, g: 1, b: 0, a: 0}
     - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
     - _LineColor: {r: 0.44811314, g: 1, b: 0.9224879, a: 1}
+  m_BuildTextureStacks: []
