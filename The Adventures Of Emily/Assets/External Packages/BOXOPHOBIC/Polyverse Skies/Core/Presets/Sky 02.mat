@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Sky 02
   m_Shader: {fileID: 4800000, guid: 6fc9318f5193c094c98c0d450cd61e3b, type: 3}
   m_ShaderKeywords: _DISABLEDIRECTIONLIGHT_ON _ENABLECLOUDSROTATION_ON _ENABLECLOUDS_ON
@@ -20,6 +21,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _BackgroundCubemap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -149,12 +154,16 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - _BackgroundExposure: 1
+    - _BackgroundMode: 0
     - _BumpScale: 1
     - _CloudHeight: 0
+    - _CloudsCat: 1
     - _CloudsHeight: 0.1
     - _CloudsLitbySun: 0
     - _CloudsRotation: 10
     - _CloudsRotationSpeed: 1
+    - _ColorsCat: 1
     - _Contrast: 0.477
     - _Contrsat: 1
     - _Cutoff: 0
@@ -172,6 +181,7 @@ Material:
     - _EnablePatternOverlay: 1
     - _EnableSkyPatternOverlay: 0
     - _EnableStars: 0
+    - _EnableStarsRotation: 0
     - _EnableStarsTwinkling: 0
     - _EnableSun: 1
     - _EnableSunMask: 0
@@ -190,6 +200,7 @@ Material:
     - _Float4: -1
     - _Float5: -0.2
     - _Float6: 1
+    - _FogCat: 1
     - _FogFill: 0
     - _FogHeight: 0
     - _FogIntensity: 0
@@ -200,10 +211,12 @@ Material:
     - _Keyword0: 0
     - _Metallic: 0
     - _Mode: 0
+    - _MoonCat: 1
     - _MoonIntensity: 1
     - _MoonSize: 0.5
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _PatternCat: 1
     - _PatternContrast: 0.2
     - _RoatationSpeed: 0.4
     - _Rotation: 0
@@ -214,15 +227,20 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _StarsAmount: 3
+    - _StarsCat: 1
     - _StarsHeightMask: 0
     - _StarsIntensity: 0
     - _StarsLayer: 1
+    - _StarsRotation: 360
+    - _StarsRotationSpeed: 0.5
     - _StarsSize: 0
     - _StarsSunMask: 0
+    - _SunCat: 1
     - _SunIntensity: 2
     - _SunRadiusB: 0
     - _SunRadoisA: 0.463
     - _SunSize: 0.8
+    - _TITLE: 1
     - _ToggleSwitch0: 0
     - _TwinklingContrast: 0
     - _TwinklingSpeed: 0
@@ -237,6 +255,7 @@ Material:
     - __dirty: 0
     - _adf: 0
     - _angle: 145
+    - _backgroundCat: 1
     - _fresnell: 0
     - _mip: 0
     m_Colors:
@@ -261,3 +280,4 @@ Material:
     - _Tint: {r: 1, g: 1, b: 1, a: 0}
     - _Vector1: {r: 0, g: 1, b: 0, a: 0}
     - _water: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_BuildTextureStacks: []
