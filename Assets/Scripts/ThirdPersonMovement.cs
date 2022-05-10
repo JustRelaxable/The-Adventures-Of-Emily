@@ -75,7 +75,9 @@ public class ThirdPersonMovement : MonoBehaviour
 
         if (onIce)
         {
-            characterController.Move(lastMoveDirection.normalized * speed * Time.deltaTime);
+            lastMoveDirection -= lastMoveDirection * Time.deltaTime;
+            lastMoveDirection += moveDir * Time.deltaTime;
+            characterController.Move(lastMoveDirection * speed * Time.deltaTime);
             return;
         }
 
