@@ -14,4 +14,14 @@ public class EmilyPickableArea : MonoBehaviour
             emilyAnimator.SetBool("Pickable", true);
         }
     }
+
+    private void OnTriggerExit(Collider other)
+    {
+        IPickable pickable;
+        if (other.TryGetComponent<IPickable>(out pickable))
+        {
+            emilyAnimator.TargetGameObject = null;
+            emilyAnimator.SetBool("Pickable", false);
+        }
+    }
 }

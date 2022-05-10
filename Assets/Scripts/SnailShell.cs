@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SnailShell : MonoBehaviour
+public class SnailShell : MonoBehaviour,IPickable
 {
     [SerializeField] private MeshCollider meshCollider;
     [SerializeField] private SphereCollider sphereCollider;
