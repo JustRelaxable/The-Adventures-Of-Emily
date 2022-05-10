@@ -12,13 +12,14 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 0.5f;
     [SerializeField] private Transform thirdPersonCamera;
     [SerializeField] private float jumpRate = 0.5f;
-    [SerializeField] private AnimationCurve hitCurve;
+    [SerializeField] private LayerMask groundLayer;
 
     private CharacterController characterController;
     private ThirdPersonInput thirdPersonInput;
 
     private float turnSmoothVelocity, vSpeed,timePassedSinceLastJump;
     private bool firstJump, secondJump = false;
+    private bool isGrounded;
     private const float GRAVITY = 9.81f;
     private Vector3 characterDirection;
     private Vector3 lastMoveDirection;
@@ -56,6 +57,8 @@ public class ThirdPersonMovement : MonoBehaviour
         moveDir = characterDirection != Vector3.zero ? Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward : Vector3.zero;
         timePassedSinceLastJump += Time.deltaTime;
 
+        CalculateIsGrounded();
+
         if (!IsGrounded)
         {
             if (thirdPersonInput.JumpHold && VerticalSpeed <= 0)
@@ -66,6 +69,10 @@ public class ThirdPersonMovement : MonoBehaviour
             {
                 vSpeed -= GRAVITY * gravityMultiplier * Time.deltaTime;
             }
+        }
+        else if(IsGrounded && !firstJump && !secondJump)
+        {
+            vSpeed = 0;
         }
 
         if(IsGrounded && timePassedSinceLastJump >= jumpRate)
@@ -86,6 +93,12 @@ public class ThirdPersonMovement : MonoBehaviour
         characterController.Move(moveDir * speed * Time.deltaTime);
     }
 
+    private void CalculateIsGrounded()
+    {
+        Ray ray = new Ray(transform.position, -transform.up);
+        Debug.DrawRay(transform.position, -transform.up*0.5f, Color.red);
+        isGrounded = Physics.Raycast(ray,0.5f,groundLayer);
+    }
 
     private void ThirdPersonInput_JumpPressed()
     {
@@ -122,10 +135,9 @@ public class ThirdPersonMovement : MonoBehaviour
     {
         float duration = 1;
         float time = 0;
-
         while (time<=duration)
         {
-            characterController.Move( transform.up * Time.deltaTime*20);
+            characterController.Move(transform.up * Time.deltaTime * 10);
             characterController.Move(-transform.forward * speed*Time.deltaTime);
             time += Time.deltaTime;
             yield return null;

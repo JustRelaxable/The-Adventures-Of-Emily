@@ -40,7 +40,6 @@ public class EmilySoundController : MonoBehaviour
     {
         //GetRandomClip();
         RaycastHit hit;
-        Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.down), Color.red);
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.down)/10, out hit,1f, layerMask))
         {
             terrainTextureData = hit.transform.gameObject.GetComponent<TerrainTextureData>();
