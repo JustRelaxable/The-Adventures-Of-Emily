@@ -9,6 +9,7 @@ public class EmilyAnimator : MonoBehaviour
 
     [SerializeField] private ThirdPersonMovement emilyMovement;
     [SerializeField] private ThirdPersonInput thirdPersonInput;
+    [SerializeField] private EmilyAttackController emilyAttackController;
     public event Action OnStepped;
     private Animator animator;
  
@@ -86,5 +87,10 @@ public class EmilyAnimator : MonoBehaviour
         TargetGameObject.GetComponent<Collider>().enabled = false;
         animator.SetBool("Pickable", false);
         GetComponent<EmilyObjectHoldController>().HoldObject(TargetGameObject);
+    }
+
+    public void Attack()
+    {
+        emilyAttackController.Attack();
     }
 }
