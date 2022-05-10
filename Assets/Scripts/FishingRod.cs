@@ -17,6 +17,6 @@ public class FishingRod : MonoBehaviour,IPickable
 
     public void PerformPickAction()
     {
-
+        GetComponent<Collider>().enabled = false;
     }
 }

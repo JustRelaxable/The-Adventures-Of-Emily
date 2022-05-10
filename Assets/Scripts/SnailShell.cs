@@ -15,4 +15,13 @@ public class SnailShell : MonoBehaviour,IPickable
         rigidbody.useGravity = true;
         transform.parent = null;
     }
+
+    public void PerformPickAction()
+    {
+        meshCollider.enabled = false;
+        sphereCollider.enabled = false;
+        rigidbody.isKinematic = true;
+        rigidbody.useGravity = false;
+        transform.localScale = new Vector3(30, 30, 30);
+    }
 }

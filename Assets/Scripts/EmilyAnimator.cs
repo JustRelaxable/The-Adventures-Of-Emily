@@ -84,7 +84,7 @@ public class EmilyAnimator : MonoBehaviour
 
     public void PickUp()
     {
-        TargetGameObject.GetComponent<Collider>().enabled = false;
+        TargetGameObject.GetComponent<IPickable>().PerformPickAction();
         animator.SetBool("Pickable", false);
         GetComponent<EmilyObjectHoldController>().HoldObject(TargetGameObject);
     }
