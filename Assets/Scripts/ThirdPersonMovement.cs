@@ -12,6 +12,7 @@ public class ThirdPersonMovement : MonoBehaviour
     [SerializeField] private float gravityMultiplier = 0.5f;
     [SerializeField] private Transform thirdPersonCamera;
     [SerializeField] private float jumpRate = 0.5f;
+    [SerializeField] private AnimationCurve hitCurve;
 
     private CharacterController characterController;
     private ThirdPersonInput thirdPersonInput;
@@ -110,5 +111,24 @@ public class ThirdPersonMovement : MonoBehaviour
     public void OnEnterIce()
     {
         lastMoveDirection = moveDir;
+    }
+
+    public void Hit()
+    {
+        StartCoroutine(HitCo());
+    }
+
+    private IEnumerator HitCo()
+    {
+        float duration = 1;
+        float time = 0;
+
+        while (time<=duration)
+        {
+            characterController.Move( transform.up * Time.deltaTime*20);
+            characterController.Move(-transform.forward * speed*Time.deltaTime);
+            time += Time.deltaTime;
+            yield return null;
+        }
     }
 }

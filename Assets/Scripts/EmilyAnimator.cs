@@ -93,4 +93,9 @@ public class EmilyAnimator : MonoBehaviour
     {
         emilyAttackController.Attack();
     }
+
+    public void Hit()
+    {
+        animator.SetTrigger("Hit");
+    }
 }
