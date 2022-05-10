@@ -8,7 +8,8 @@ public class Pond : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if(other.GetComponentInChildren<EmilyObjectHoldController>().GetNameOfCurrentObject() == "Olta")
+            FishingRod fishingRod;
+            if (other.GetComponentInChildren<EmilyObjectHoldController>().GetPickableObject().TryGetComponent<FishingRod>(out fishingRod))
                 other.GetComponentInChildren<EmilyAnimator>().SetBool("Fishable", true);
         }
     }

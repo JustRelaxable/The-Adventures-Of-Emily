@@ -7,9 +7,9 @@ public class EmilyObjectHoldController : MonoBehaviour
     [SerializeField] Transform holdTransform;
     [SerializeField] SkinnedMeshRenderer yastýkRenderer;
 
-    private PickableObject pickableObject;
+    private GameObject pickableObject;
 
-    public PickableObject GetPickableObject()
+    public GameObject GetPickableObject()
     {
         return pickableObject;
     }
@@ -28,7 +28,7 @@ public class EmilyObjectHoldController : MonoBehaviour
 
     public void HoldObject(GameObject pickableObject)
     {
-        this.pickableObject = pickableObject.GetComponent<PickableObject>();
+        this.pickableObject = pickableObject;
         pickableObject.transform.parent = holdTransform;
         pickableObject.transform.localPosition = Vector3.zero;
         pickableObject.transform.localRotation = Quaternion.identity;
