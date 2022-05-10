@@ -11,6 +11,6 @@ public class EmilyAttackController : MonoBehaviour
         Vector3 tornadoSpawnPoint = transform.position + transform.forward * tornadoSpawnPointForward;
         GameObject spawnedTornado = Instantiate(tornado);
         spawnedTornado.transform.position = tornadoSpawnPoint;
-        spawnedTornado.GetComponent<TornadoMovement>().InitializeMovementDirection(transform.forward);
+        spawnedTornado.GetComponent<Tornado>().InitializeMovementDirection(transform.forward);
     }
 }

@@ -73,11 +73,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6342702231992770182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4844ccff4e151b3489a98d5c6a441ce7, type: 3}
+  m_Script: {fileID: 11500000, guid: 9027c2365cf49eb469d24ec7c325bca4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  aliveTime: 5
-  velocity: 3
+  aliveTime: 10
+  velocity: 4
 --- !u!1001 &6342702232870652435
 PrefabInstance:
   m_ObjectHideFlags: 0
