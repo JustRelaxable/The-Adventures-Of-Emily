@@ -20,6 +20,7 @@ public class ThirdPersonMovement : MonoBehaviour
     private float turnSmoothVelocity, vSpeed,timePassedSinceLastJump;
     private bool firstJump, secondJump = false;
     private bool isGrounded;
+    private bool canMove = true;
     private const float GRAVITY = 9.81f;
     private Vector3 characterDirection;
     private Vector3 lastMoveDirection;
@@ -32,6 +33,7 @@ public class ThirdPersonMovement : MonoBehaviour
     public bool FirstJump { get => firstJump; }
     public bool SecondJump { get => secondJump; }
     public float JumpForce { get => jumpForce; set=> jumpForce = value; }
+    public bool CanMove { get => canMove; set=>canMove = value; }
 
     public event Action OnJump;
 
@@ -53,7 +55,7 @@ public class ThirdPersonMovement : MonoBehaviour
         characterDirection = new Vector3(thirdPersonInput.HorizontalInput, 0f, thirdPersonInput.VerticalInput);
         float targetAngle = Mathf.Atan2(characterDirection.x, characterDirection.z) * Mathf.Rad2Deg + thirdPersonCamera.eulerAngles.y;
         float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, turnSmoothTime);
-        transform.rotation = Quaternion.Euler(0f, angle, 0f);
+
         moveDir = characterDirection != Vector3.zero ? Quaternion.Euler(0f, targetAngle, 0f) * Vector3.forward : Vector3.zero;
         timePassedSinceLastJump += Time.deltaTime;
 
@@ -85,12 +87,23 @@ public class ThirdPersonMovement : MonoBehaviour
         {
             lastMoveDirection -= lastMoveDirection * Time.deltaTime;
             lastMoveDirection += moveDir * Time.deltaTime;
+            lastMoveDirection = new Vector3(lastMoveDirection.x, vSpeed, lastMoveDirection.z);
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
             characterController.Move(lastMoveDirection * speed * Time.deltaTime);
             return;
         }
 
         moveDir.y = vSpeed;
-        characterController.Move(moveDir * speed * Time.deltaTime);
+        if (canMove)
+        {
+            transform.rotation = Quaternion.Euler(0f, angle, 0f);
+            characterController.Move(moveDir * speed * Time.deltaTime);
+        }
+        else
+        {
+            Vector3 yOnly = new Vector3(0, moveDir.y, 0);
+            characterController.Move(yOnly * speed * Time.deltaTime);
+        }
     }
 
     private void CalculateIsGrounded()

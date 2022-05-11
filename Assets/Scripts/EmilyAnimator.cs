@@ -12,7 +12,8 @@ public class EmilyAnimator : MonoBehaviour
     [SerializeField] private EmilyAttackController emilyAttackController;
     public event Action OnStepped;
     private Animator animator;
- 
+    private bool EmilyParalysed { get => !emilyMovement.CanMove; }
+
     private void Awake()
     {
         animator = GetComponent<Animator>();
@@ -21,7 +22,12 @@ public class EmilyAnimator : MonoBehaviour
     private void Start()
     {
         thirdPersonInput.JumpPressed += ThirdPersonInput_JumpPressed;
-        thirdPersonInput.AttackPressed += () => { animator.SetTrigger("AttackTest"); };
+        thirdPersonInput.AttackPressed += () =>
+        {
+            if (EmilyParalysed)
+                return;
+            animator.SetTrigger("AttackTest");
+        };
     }
 
     private void ThirdPersonInput_JumpPressed()
@@ -77,7 +83,7 @@ public class EmilyAnimator : MonoBehaviour
         OnStepped?.Invoke();
     }
 
-    public void SetBool(string boolKey,bool value)
+    public void SetBool(string boolKey, bool value)
     {
         animator.SetBool(boolKey, value);
     }
@@ -91,11 +97,23 @@ public class EmilyAnimator : MonoBehaviour
 
     public void Attack()
     {
+        if (EmilyParalysed)
+            return;
         emilyAttackController.Attack();
     }
 
     public void Hit()
     {
         animator.SetTrigger("Hit");
+    }
+
+    public void DisableMovement()
+    {
+        emilyMovement.CanMove = false;
+    }
+
+    public void EnableMovement()
+    {
+        emilyMovement.CanMove = true;
     }
 }
