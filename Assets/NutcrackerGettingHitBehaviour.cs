@@ -8,7 +8,7 @@ public class NutcrackerGettingHitBehaviour : StateMachineBehaviour
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.GetComponent<NavMeshAgent>().SetDestination(animator.transform.position);
+        animator.GetComponent<CharacterController>().SimpleMove(Vector3.zero);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

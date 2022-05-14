@@ -13,18 +13,11 @@ public class NutCracker : MonoBehaviour,IAttackable
     [SerializeField] float attackDistance;
     [SerializeField] float emilyTargetRadius;
     [SerializeField] NutCrackerSword nutCrackerSword;
-    private NavMeshAgent navMeshAgent;
-    private GameObject target;
     private Animator animator;
 
-    private bool followingTarget = false;
-    private bool swordAttackInProgress = false;
-
-    private Action FollowAction;
 
     private void Awake()
     {
-        navMeshAgent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
     }
 
