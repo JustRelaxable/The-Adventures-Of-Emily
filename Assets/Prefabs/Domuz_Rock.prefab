@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4616775319034657702}
   - component: {fileID: 7388216935613153702}
   - component: {fileID: 4476535531862769519}
+  - component: {fileID: 8209687402575990567}
   m_Layer: 0
   m_Name: Domuz_Rock
   m_TagString: Untagged
@@ -57,7 +58,7 @@ LODGroup:
     fadeTransitionWidth: 0
     renderers:
     - renderer: {fileID: 2142661858702357741}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!64 &7388216935613153702
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -88,6 +89,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8209687402575990567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3689567016690557611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 717391d8a5dc9ed4e9233a4793c56b54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7971935082987255021
 GameObject:
   m_ObjectHideFlags: 0

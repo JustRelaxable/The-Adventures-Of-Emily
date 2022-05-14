@@ -47,7 +47,6 @@ public class Domuz : MonoBehaviour
         midVector = Quaternion.Euler(0, domuzRockAngleFix, 0) * midVector;
         instantiatedRock.transform.parent = null;
         Vector3 forceVector = ((transform.position + midVector) - instantiatedRock.transform.position) * rockForceMultiplier;
-        Debug.Log(forceVector);
         Rigidbody instantiedRockRigidbody = instantiatedRock.GetComponent<Rigidbody>();
         instantiedRockRigidbody.isKinematic = false;
         instantiedRockRigidbody.AddForce(forceVector);
