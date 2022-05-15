@@ -21,9 +21,4 @@ public class PiyanoTush : MonoBehaviour
             animator.SetTrigger("NotPushed");
         }
     }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("Xd");
-    }
 }
