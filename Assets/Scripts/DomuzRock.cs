@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class DomuzRock : MonoBehaviour
 {
+    private Domuz domuz;
+    public void InitializeRock(Domuz domuz)
+    {
+        this.domuz = domuz;
+    }
     private void Awake()
     {
         Destroy(gameObject, 10);
@@ -15,6 +20,7 @@ public class DomuzRock : MonoBehaviour
         if(collision.gameObject.TryGetComponent<IAttackable>(out attackable))
         {
             attackable.PerformAttackResult();
+            domuz.OnSuccessfullEmilyHit();
         }
     }
 }

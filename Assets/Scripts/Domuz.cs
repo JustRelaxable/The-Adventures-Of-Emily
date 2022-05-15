@@ -4,13 +4,14 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class Domuz : MonoBehaviour
+public class Domuz : MonoBehaviour,IAttackable
 {
     [SerializeField] Transform rockTransform;
     [SerializeField] GameObject rockPrefab;
     [SerializeField] float rockTargetHeight;
     [SerializeField] float rockForceMultiplier;
     [SerializeField] float domuzRockAngleFix;
+    [SerializeField] int domuzHitPoint;
 
     private CharacterController characterController;
     private Animator animator;
@@ -35,6 +36,7 @@ public class Domuz : MonoBehaviour
     public void InstantiateRock()
     {
         instantiatedRock = Instantiate(rockPrefab, rockTransform);
+        instantiatedRock.GetComponent<DomuzRock>().InitializeRock(this);
         instantiatedRock.GetComponent<Rigidbody>().isKinematic = true;
         instantiatedRock.transform.localPosition = Vector3.zero;
         instantiatedRock.transform.localRotation = Quaternion.identity;
@@ -50,5 +52,25 @@ public class Domuz : MonoBehaviour
         Rigidbody instantiedRockRigidbody = instantiatedRock.GetComponent<Rigidbody>();
         instantiedRockRigidbody.isKinematic = false;
         instantiedRockRigidbody.AddForce(forceVector);
+    }
+
+    public void PerformAttackResult()
+    {
+        animator.SetTrigger("HitByEmily");
+        domuzHitPoint--;
+        if(domuzHitPoint == 0)
+        {
+            DomuzDie();
+        }
+    }
+
+    public void OnSuccessfullEmilyHit()
+    {
+        animator.SetTrigger("DomuzRockHit");
+    }
+
+    private void DomuzDie()
+    {
+        animator.SetTrigger("DomuzKilled");
     }
 }
