@@ -42,5 +42,9 @@ public class EmilyObjectHoldController : MonoBehaviour
             Destroy(holdTransform.GetChild(0).gameObject);
             yastýkRenderer.enabled = true;
         }
+        else
+        {
+            yastýkRenderer.enabled = true;
+        }
     }
 }
