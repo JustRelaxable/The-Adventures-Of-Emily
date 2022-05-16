@@ -8,6 +8,8 @@ public class Domuz : MonoBehaviour,IAttackable
 {
     [SerializeField] Transform rockTransform;
     [SerializeField] GameObject rockPrefab;
+    [SerializeField] GameObject et;
+    [SerializeField] Transform etSpawnPoint;
     [SerializeField] float rockTargetHeight;
     [SerializeField] float rockForceMultiplier;
     [SerializeField] float domuzRockAngleFix;
@@ -71,6 +73,8 @@ public class Domuz : MonoBehaviour,IAttackable
 
     private void DomuzDie()
     {
+        et.SetActive(true);
+        et.transform.position = etSpawnPoint.position;
         animator.SetTrigger("DomuzKilled");
     }
 }
