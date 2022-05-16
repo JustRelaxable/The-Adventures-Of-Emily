@@ -15,8 +15,12 @@ public class FishingRod : MonoBehaviour,IPickable
         fish.transform.localPosition = Vector3.zero;
     }
 
+    public GameObject GetFish()
+    {
+        return fish;
+    }
+
     public void PerformPickAction()
     {
-        //GetComponent<Collider>().enabled = false;
     }
 }

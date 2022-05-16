@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8807644220298709810}
   - component: {fileID: 1944849045151434587}
   - component: {fileID: 2762479079206360650}
+  - component: {fileID: 4331102653817564234}
   m_Layer: 0
   m_Name: buton2
   m_TagString: Untagged
@@ -110,11 +111,25 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93305213253141086}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.2195525, y: 0.23024458, z: 0.22936784}
   m_Center: {x: -0.00035041955, y: -0.00023802373, z: 0.10747254}
+--- !u!114 &4331102653817564234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 93305213253141086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00cabc5c84cd4c7428123498811456c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  requiredGameObject: {fileID: 0}
+  bridge: {fileID: 0}
 --- !u!1 &7372026476978910267
 GameObject:
   m_ObjectHideFlags: 0

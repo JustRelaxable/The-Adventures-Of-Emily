@@ -19,7 +19,13 @@ public class FishingCastStopBehaviour : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameObject fish = animator.GetComponent<EmilyObjectHoldController>().GetPickableObject().GetComponent<FishingRod>().GetFish();
+        fish.transform.parent = null;
         animator.GetComponent<EmilyObjectHoldController>().ReleaseObject();
+        GameObject fishSpot = GameObject.FindGameObjectWithTag("FishSpot");
+        fish.transform.position = fishSpot.transform.position;
+        fish.GetComponent<Rigidbody>().isKinematic = false;
+        fish.GetComponent<Rigidbody>().useGravity = true;
         animator.SetBool("Fishable", false);
     }
 
