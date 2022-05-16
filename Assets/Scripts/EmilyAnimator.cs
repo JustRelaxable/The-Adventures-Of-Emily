@@ -13,6 +13,7 @@ public class EmilyAnimator : MonoBehaviour
     public event Action OnStepped;
     private Animator animator;
     private bool EmilyParalysed { get => !emilyMovement.CanMove; }
+    public bool isDig = false;
 
     private void Awake()
     {
@@ -26,6 +27,12 @@ public class EmilyAnimator : MonoBehaviour
         {
             if (EmilyParalysed)
                 return;
+            if (isDig)
+            {
+                animator.SetTrigger("Dig");
+                return;
+            }
+
             animator.SetTrigger("AttackTest");
         };
     }
