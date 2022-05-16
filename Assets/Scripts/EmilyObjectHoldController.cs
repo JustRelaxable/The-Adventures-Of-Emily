@@ -40,6 +40,7 @@ public class EmilyObjectHoldController : MonoBehaviour
         if (holdTransform.childCount > 0)
         {
             Destroy(holdTransform.GetChild(0).gameObject);
+            GetComponent<EmilyAnimator>().TargetGameObject = null;
             yastýkRenderer.enabled = true;
         }
         else

@@ -26,6 +26,7 @@ public class KazanTrigger : MonoBehaviour
             {
                 GameObject pickableObject = emilyObjectHoldController.GetPickableObject();
                 pickableObject.transform.parent = objectPoints[objectIndex];
+                Debug.Log(objectIndex);
                 objectIndex++;
                 pickableObject.transform.localPosition = Vector3.zero;
                 emilyObjectHoldController.ReleaseObject();
