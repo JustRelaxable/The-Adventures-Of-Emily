@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2874803189349067370}
   - component: {fileID: 8500652555793161961}
   - component: {fileID: 3654258669730333668}
+  - component: {fileID: 7578990451608123231}
+  - component: {fileID: 7982545562449817545}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081033736643453515}
   m_LocalRotation: {x: 0.000000081460335, y: 0, z: -0, w: 1}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.02, y: 0.28, z: -0.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4617846618254121840}
@@ -81,6 +83,33 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7578990451608123231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081033736643453515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8a23a231f87f243489bb5d26050eba42, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forceMultiplier: 20
+  cooldownTime: 0.1
+--- !u!65 &7982545562449817545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1081033736643453515}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7022543, y: 2.7383249, z: 3.643992}
+  m_Center: {x: 0.0064049163, y: 1.3660277, z: 0.024740735}
 --- !u!1 &5430834984266416586
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,7 +135,7 @@ Transform:
   m_GameObject: {fileID: 5430834984266416586}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 40.71, y: 0.14, z: -140.49792}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.3, y: 0.41825953, z: 0.41825953}
   m_Children:
   - {fileID: 2874803189349067370}
   m_Father: {fileID: 0}

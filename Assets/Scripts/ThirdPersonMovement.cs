@@ -156,4 +156,9 @@ public class ThirdPersonMovement : MonoBehaviour
             yield return null;
         }
     }
+
+    public void ResetVerticalSpeed()
+    {
+        vSpeed = 0;
+    }
 }
