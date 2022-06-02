@@ -10,6 +10,7 @@ public class NutCracker : MonoBehaviour,IAttackable
     public float AttackDistance { get=>attackDistance; }
     public NutCrackerSword NutCrackerSword { get => nutCrackerSword; }
 
+    [SerializeField] int attackPoint;
     [SerializeField] float attackDistance;
     [SerializeField] float emilyTargetRadius;
     [SerializeField] NutCrackerSword nutCrackerSword;
@@ -29,5 +30,14 @@ public class NutCracker : MonoBehaviour,IAttackable
     public void EnableNutCrackerSwordHit()
     {
         NutCrackerSword.CanHit = true;
+    }
+
+    public void GetDamage()
+    {
+        attackPoint--;
+        if(attackPoint <= 0)
+        {
+            animator.SetTrigger("Death");
+        }
     }
 }
