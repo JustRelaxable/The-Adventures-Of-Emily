@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 3921951768686697974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 6.43, y: 2.37, z: 8.58}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 9.8345, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,4 +108,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bf53504d80c15d49b4bdae13910c02a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tutorialText: Hello
+  tutorialText: You are too close to find the run!
