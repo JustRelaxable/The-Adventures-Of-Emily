@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PuzzleRune : MonoBehaviour
 {
-    GameObject[] gameObjectsToDisable;
+    [SerializeField] GameObject[] gameObjectsToDisable;
     Animator animator;
 
     private void Awake()

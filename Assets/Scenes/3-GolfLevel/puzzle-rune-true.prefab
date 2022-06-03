@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2912688770017734012}
   - component: {fileID: 1121119543754611126}
   - component: {fileID: 7586045463190340044}
+  - component: {fileID: 8404524457673119659}
+  - component: {fileID: 2801694677631772489}
   m_Layer: 0
   m_Name: puzzle-rune-true
   m_TagString: Untagged
@@ -95,3 +97,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.023755392, y: 0.023752606, z: 0.015420951}
   m_Center: {x: 0, y: -1.4549187e-17, z: 0.0077104755}
+--- !u!95 &8404524457673119659
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481675725228636259}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e9b843789d05f84aab921cfec777314, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2801694677631772489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1481675725228636259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 379f25ca188189541861c8438ddef716, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectsToDisable: []
