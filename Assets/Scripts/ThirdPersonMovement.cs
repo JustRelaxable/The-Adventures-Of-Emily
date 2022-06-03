@@ -115,19 +115,19 @@ public class ThirdPersonMovement : MonoBehaviour
 
     private void ThirdPersonInput_JumpPressed()
     {
-        if (!firstJump && !secondJump && timePassedSinceLastJump >= jumpRate)
-        {
-            vSpeed = jumpForce;
-            firstJump = true;
-            timePassedSinceLastJump = 0f;
-            OnJump?.Invoke();
-        }
-        else if (firstJump && !secondJump)
-        {
-            vSpeed = jumpForce;
-            secondJump = true;
-            OnJump?.Invoke();
-        }
+            if (!firstJump && !secondJump && timePassedSinceLastJump >= jumpRate)
+            {
+                vSpeed = jumpForce;
+                firstJump = true;
+                timePassedSinceLastJump = 0f;
+                OnJump?.Invoke();
+            }
+            else if (firstJump && !secondJump)
+            {
+                vSpeed = jumpForce;
+                secondJump = true;
+                OnJump?.Invoke();
+            }
     }
 
     private void OnTriggerEnter(Collider other)

@@ -7,6 +7,7 @@ public class ThirdPersonPCInput : ThirdPersonInput
 {
     private float horizontalInput,verticalInput;
     public override bool JumpHold { get; protected set; }
+    public bool JumpActive { get; set; } = true;
     public override event Action JumpPressed;
     public override event Action AttackPressed;
     public override float HorizontalInput { get; protected set; }
@@ -29,7 +30,7 @@ public class ThirdPersonPCInput : ThirdPersonInput
 
     protected override void CalculateJumpPressed()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (JumpActive && Input.GetKeyDown(KeyCode.Space))
         {
             JumpPressed?.Invoke();
         }
