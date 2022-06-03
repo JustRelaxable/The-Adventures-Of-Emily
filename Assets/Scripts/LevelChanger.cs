@@ -11,7 +11,12 @@ public class LevelChanger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            SceneManager.LoadScene(nextLevelIndex);
+            LoadNextLevel();
         }
+    }
+
+    public void LoadNextLevel()
+    {
+        SceneManager.LoadScene(nextLevelIndex);
     }
 }
