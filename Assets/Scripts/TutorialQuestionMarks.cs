@@ -13,12 +13,20 @@ public class TutorialQuestionMarks : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        tutorialTextPanel.SetText(tutorialText);
-        tutorialTextPanel.OpenPanel();
+        if (other.CompareTag("Player"))
+        {
+            tutorialTextPanel.SetText(tutorialText);
+            tutorialTextPanel.OpenPanel();
+        }
+        
     }
 
     private void OnTriggerExit(Collider other)
     {
-        tutorialTextPanel.ClosePanel();
+        if (other.CompareTag("Player"))
+        {
+            tutorialTextPanel.ClosePanel();
+        }
+        
     }
 }

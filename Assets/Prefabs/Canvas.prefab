@@ -1185,7 +1185,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &153716349541091375
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1614,7 +1614,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objectives:
-  - objectiveText: Go to beanstalk.
+  - objectiveText: Climb to the shelf.
     isObjectiveCompleted: 0
   objectivePrefab: {fileID: 2393690868630011633, guid: 9657d546e82b7a4428fed78cb3ba782d, type: 3}
 --- !u!1 &153716349786135490

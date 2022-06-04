@@ -11,14 +11,15 @@ public class TutorialDoor : MonoBehaviour
     private Objective objective;
     private void OnTriggerEnter(Collider other)
     {
-   
-
-       
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponentInChildren<EmilyAnimator>().EmilyAttackEnabled = false;
+        }
     }
 
     private void OnTriggerStay(Collider other)
     {
-        if (objective == null && Input.GetKeyDown(KeyCode.E))
+        if (objective == null && Input.GetMouseButtonDown(0))
         {
             questionMark3.gameObject.SetActive(true);
             objective = new Objective("Find the key of the door.", false);
@@ -27,9 +28,17 @@ public class TutorialDoor : MonoBehaviour
             objectiveUI.UpdateUI();
         }
 
-        if (objective!=null&& objective.ObjectiveCompleted && Input.GetKeyDown(KeyCode.E))
+        if (objective!=null&& objective.ObjectiveCompleted && Input.GetMouseButtonDown(0))
         {
             doorAnimator.SetTrigger("OpenDoor");
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            other.GetComponentInChildren<EmilyAnimator>().EmilyAttackEnabled = true;
         }
     }
 }

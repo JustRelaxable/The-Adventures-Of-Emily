@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 0.667
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1714082438}
-  m_IndirectSpecularColor: {r: 0.0014663879, g: 0.008154188, b: 0.013504528, a: 0.667}
+  m_IndirectSpecularColor: {r: 0.0015568492, g: 0.0082507795, b: 0.013539643, a: 0.667}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4097,27 +4097,6 @@ Transform:
   m_Father: {fileID: 1866260135}
   m_RootOrder: 60
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &87711526 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1975745495256955815, guid: 53361474918791e49934142882a60c70, type: 3}
-  m_PrefabInstance: {fileID: 1094364591}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &87711529
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87711526}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 426beb6228d94e64ba0efe74c69f7ebe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  emilyMovement: {fileID: 439714908}
-  thirdPersonInput: {fileID: 439714910}
-  emilyAttackController: {fileID: 0}
-  isDig: 0
 --- !u!1 &87804086 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: b4727ecec4beac644975e12e15b53b6d, type: 3}
@@ -4387,7 +4366,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_RootOrder
-      value: 461
+      value: 460
       objectReference: {fileID: 0}
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4453,7 +4432,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 79b2dee84713f514188d509497aea431, type: 3}
       propertyPath: m_RootOrder
-      value: 467
+      value: 466
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 79b2dee84713f514188d509497aea431, type: 3}
       propertyPath: m_LocalScale.x
@@ -6269,6 +6248,49 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4307904433006264629, guid: 453f85011c0c5344aa634178a068b2bd, type: 3}
   m_PrefabInstance: {fileID: 1809753973}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &149739388
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 149739390}
+  - component: {fileID: 149739389}
+  m_Layer: 0
+  m_Name: OniCollisionWorld
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &149739389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149739388}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d02d25c24c8574316883c920912e4fdb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &149739390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149739388}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 467
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &149899288
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7836,7 +7858,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_RootOrder
-      value: 463
+      value: 462
       objectReference: {fileID: 0}
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -14335,7 +14357,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_RootOrder
-      value: 465
+      value: 464
       objectReference: {fileID: 0}
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -15294,7 +15316,7 @@ MonoBehaviour:
   jumpClips:
   - {fileID: 8300000, guid: c7edf8e3bae22354c9ab7b060d64594a, type: 3}
   - {fileID: 8300000, guid: 2a4bfc6d96e9cf84ea0bddcfa26cc272, type: 3}
-  emilyAnimator: {fileID: 87711529}
+  emilyAnimator: {fileID: 0}
   thirdPersonMovement: {fileID: 439714908}
   layerMask:
     serializedVersion: 2
@@ -43492,7 +43514,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_RootOrder
-      value: 456
+      value: 455
       objectReference: {fileID: 0}
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -44757,7 +44779,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_RootOrder
-      value: 458
+      value: 457
       objectReference: {fileID: 0}
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49291,11 +49313,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976326280909098844, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.008912524
+      value: 0.008912533
       objectReference: {fileID: 0}
     - target: {fileID: 1976326280909098844, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00097527215
+      value: 0.00097527314
       objectReference: {fileID: 0}
     - target: {fileID: 1976326280909098844, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.y
@@ -49351,11 +49373,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976326281533305045, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.008912523
+      value: 0.008912532
       objectReference: {fileID: 0}
     - target: {fileID: 1976326281533305045, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0009752722
+      value: 0.0009752732
       objectReference: {fileID: 0}
     - target: {fileID: 1976326281533305045, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.y
@@ -49391,11 +49413,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282184794082, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.008893297
+      value: 0.0088933315
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282184794082, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0011372236
+      value: 0.001137228
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282184794082, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.y
@@ -49423,11 +49445,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282528796409, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.008928757
+      value: 0.008928749
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282528796409, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.00081342633
+      value: 0.0008134256
       objectReference: {fileID: 0}
     - target: {fileID: 1976326282528796409, guid: 53361474918791e49934142882a60c70, type: 3}
       propertyPath: m_LocalRotation.y
@@ -50604,7 +50626,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_RootOrder
-      value: 459
+      value: 458
       objectReference: {fileID: 0}
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -55945,7 +55967,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7343917481087436737, guid: 1233aa04fa57e2a488f2bba725556550, type: 3}
       propertyPath: tutorialText
-      value: You can use "E" to pick up some objects as well.
+      value: You can use "Left Click" to pick up some objects as well.
       objectReference: {fileID: 0}
     - target: {fileID: 7343917481087436796, guid: 1233aa04fa57e2a488f2bba725556550, type: 3}
       propertyPath: m_Name
@@ -57726,7 +57748,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_RootOrder
-      value: 462
+      value: 461
       objectReference: {fileID: 0}
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -62635,7 +62657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 79b2dee84713f514188d509497aea431, type: 3}
       propertyPath: m_RootOrder
-      value: 466
+      value: 465
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 79b2dee84713f514188d509497aea431, type: 3}
       propertyPath: m_LocalScale.x
@@ -64131,7 +64153,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_RootOrder
-      value: 457
+      value: 456
       objectReference: {fileID: 0}
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -69828,7 +69850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3921951768686697975, guid: 96d05dbd42b0c674eb67c25c07ed69e5, type: 3}
       propertyPath: tutorialText
-      value: Pick it up! Use "E".
+      value: Pick it up! Use Left Click.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 96d05dbd42b0c674eb67c25c07ed69e5, type: 3}
@@ -70437,49 +70459,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d69b0fca7ac7342a49b39bb048c811, type: 3}
---- !u!1 &1660221906
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1660221908}
-  - component: {fileID: 1660221907}
-  m_Layer: 0
-  m_Name: OniCollisionWorld
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1660221907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660221906}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d02d25c24c8574316883c920912e4fdb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1660221908
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1660221906}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 455
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1664643013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3388537039447241905, guid: 0763e557dfa7dc54798bfd19e2fcb0e4, type: 3}
@@ -77363,7 +77342,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_RootOrder
-      value: 464
+      value: 463
       objectReference: {fileID: 0}
     - target: {fileID: 6032649240743255710, guid: 915b939ae6a252d4b8eb4d03c67c194f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -79417,7 +79396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7343917481087436737, guid: 1233aa04fa57e2a488f2bba725556550, type: 3}
       propertyPath: tutorialText
-      value: Use "E" to interact with objects. Try opening that door.
+      value: Use "Left Click" to interact with objects. Try opening that door.
       objectReference: {fileID: 0}
     - target: {fileID: 7343917481087436796, guid: 1233aa04fa57e2a488f2bba725556550, type: 3}
       propertyPath: m_Name
@@ -83055,7 +83034,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_RootOrder
-      value: 460
+      value: 459
       objectReference: {fileID: 0}
     - target: {fileID: 1341317534038454549, guid: c273a513ab6f3a8489ac86235a1d5e9c, type: 3}
       propertyPath: m_LocalPosition.x

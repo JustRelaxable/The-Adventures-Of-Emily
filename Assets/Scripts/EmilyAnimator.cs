@@ -13,6 +13,7 @@ public class EmilyAnimator : MonoBehaviour
     public event Action OnStepped;
     private Animator animator;
     private bool EmilyParalysed { get => !emilyMovement.CanMove; }
+    public bool EmilyAttackEnabled { get; set; } = true;
     public bool isDig = false;
 
     private void Awake()
@@ -25,6 +26,8 @@ public class EmilyAnimator : MonoBehaviour
         thirdPersonInput.JumpPressed += ThirdPersonInput_JumpPressed;
         thirdPersonInput.AttackPressed += () =>
         {
+            if (!EmilyAttackEnabled)
+                return;
             if (EmilyParalysed)
                 return;
             if (isDig)
