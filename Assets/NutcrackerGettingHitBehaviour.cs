@@ -9,7 +9,7 @@ public class NutcrackerGettingHitBehaviour : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.GetComponent<CharacterController>().SimpleMove(Vector3.zero);
-        animator.GetComponent<NutCracker>().GetDamage();
+        //animator.GetComponent<NutCracker>().GetDamage();
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

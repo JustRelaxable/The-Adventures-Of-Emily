@@ -24,7 +24,16 @@ public class NutCracker : MonoBehaviour,IAttackable
 
     public void PerformAttackResult()
     {
-        animator.SetTrigger("HitTaken");
+        attackPoint--;
+        if (attackPoint <= 0)
+        {
+            animator.SetTrigger("Death");
+        }
+        else
+        {
+            animator.SetTrigger("HitTaken");
+        }
+
     }
 
     public void EnableNutCrackerSwordHit()
@@ -34,10 +43,6 @@ public class NutCracker : MonoBehaviour,IAttackable
 
     public void GetDamage()
     {
-        attackPoint--;
-        if(attackPoint <= 0)
-        {
-            animator.SetTrigger("Death");
-        }
+     
     }
 }
