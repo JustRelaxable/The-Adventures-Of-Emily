@@ -19,6 +19,7 @@ public class TutorialDoor : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        /*
         if (objective == null && Input.GetMouseButtonDown(0))
         {
             questionMark3.gameObject.SetActive(true);
@@ -29,6 +30,11 @@ public class TutorialDoor : MonoBehaviour
         }
 
         if (objective!=null&& objective.ObjectiveCompleted && Input.GetMouseButtonDown(0))
+        {
+            doorAnimator.SetTrigger("OpenDoor");
+        }*/
+
+        if(tutorialKey.KeyCollected && Input.GetMouseButtonDown(0))
         {
             doorAnimator.SetTrigger("OpenDoor");
         }

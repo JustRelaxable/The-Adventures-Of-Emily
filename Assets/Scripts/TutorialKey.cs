@@ -5,12 +5,15 @@ using UnityEngine;
 public class TutorialKey : MonoBehaviour
 {
     public Objective keyObjective;
+    public bool KeyCollected { get => keyCollected;}
+    private bool keyCollected = false;
     [SerializeField] ObjectiveUI objectiveUI;
     private void OnTriggerStay(Collider other)
     {
         if (Input.GetMouseButtonDown(0))
         {
             keyObjective.ObjectiveCompleted = true;
+            keyCollected = true;
             objectiveUI.UpdateUI();
             Destroy(this.gameObject);
         }
