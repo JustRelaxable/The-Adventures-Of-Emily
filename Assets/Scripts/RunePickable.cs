@@ -8,6 +8,11 @@ public class RunePickable : MonoBehaviour,IPickable
 
     public void PerformPickAction()
     {
+        Rigidbody rigidbody;
+        if(TryGetComponent<Rigidbody>(out rigidbody))
+        {
+            Destroy(rigidbody);
+        }
     }
 
     public int GetRuneNumber()

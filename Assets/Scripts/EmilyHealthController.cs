@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EmilyHealthController : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class EmilyHealthController : MonoBehaviour
         emilyDamagePoint -= damagePoint;
         if(emilyDamagePoint <= 0)
         {
-            //Game Over - Level restart
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
