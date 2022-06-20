@@ -8,6 +8,9 @@ public class FallingBall : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            EmilyHealthController emilyHealthController;
+            emilyHealthController = collision.gameObject.GetComponent<EmilyHealthController>();
+            emilyHealthController.DealDamageToEmily(1);
             CheckpointManager.instance.GoToLastCheckpoint();
         }
     }

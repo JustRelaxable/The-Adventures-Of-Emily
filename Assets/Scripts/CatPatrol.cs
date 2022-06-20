@@ -63,6 +63,7 @@ public class CatPatrol : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            other.GetComponent<EmilyHealthController>().DealDamageToEmily(1);
             CheckpointManager.instance.GoToLastCheckpoint();
             GoToRest();
         }
