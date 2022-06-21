@@ -21,12 +21,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: hair
-    second: {fileID: 2100000, guid: 34471f34c7c41a54e9318b546c6e51ed, type: 2}
+    second: {fileID: 2100000, guid: cd5f707a5be8e844f82ced733b2476c4, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: material
-    second: {fileID: 2100000, guid: 20a07b597fae116459457e091acda073, type: 2}
+    second: {fileID: 2100000, guid: 6bff70cbc1155164495a17e7672be5bc, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
