@@ -8,7 +8,11 @@ public class TutorialDoor : MonoBehaviour
     [SerializeField] Animator doorAnimator;
     [SerializeField] TutorialKey tutorialKey;
     [SerializeField] GameObject questionMark3;
+    
+
+
     private Objective objective;
+    public AudioClip doorsound;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -37,6 +41,7 @@ public class TutorialDoor : MonoBehaviour
         if(tutorialKey.KeyCollected && Input.GetMouseButtonDown(0))
         {
             doorAnimator.SetTrigger("OpenDoor");
+            AudioSource.PlayClipAtPoint(doorsound, transform.position);
         }
     }
 

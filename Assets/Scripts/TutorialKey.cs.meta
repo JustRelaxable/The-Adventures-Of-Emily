@@ -3,7 +3,9 @@ guid: e0a1892738048f64090dba1d021974c1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - keysound: {fileID: 8300000, guid: c09caa328ccb2f84098b90809589073d, type: 3}
+  - objectiveUI: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

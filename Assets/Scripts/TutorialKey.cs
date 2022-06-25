@@ -7,6 +7,7 @@ public class TutorialKey : MonoBehaviour
     public Objective keyObjective;
     public bool KeyCollected { get => keyCollected;}
     private bool keyCollected = false;
+    public AudioClip keysound;
     [SerializeField] ObjectiveUI objectiveUI;
     private void OnTriggerStay(Collider other)
     {
@@ -16,6 +17,7 @@ public class TutorialKey : MonoBehaviour
             keyCollected = true;
             objectiveUI.UpdateUI();
             Destroy(this.gameObject);
+            AudioSource.PlayClipAtPoint(keysound, transform.position);
         }
     }
 
@@ -24,6 +26,7 @@ public class TutorialKey : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponentInChildren<EmilyAnimator>().EmilyAttackEnabled = false;
+            
         }
     }
 
