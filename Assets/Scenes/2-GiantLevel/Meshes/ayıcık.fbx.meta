@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Mat_Toys
-    second: {fileID: 2100000, guid: eb1648e9faa188c49bced18e4061ad28, type: 2}
+    second: {fileID: 2100000, guid: 79cdf5743e6d8f748b78007219263597, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
