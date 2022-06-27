@@ -8,6 +8,7 @@ public abstract class ThirdPersonInput : MonoBehaviour
     public abstract bool JumpHold { get; protected set; }
     public abstract event Action JumpPressed;
     public abstract event Action AttackPressed;
+    public abstract event Action EPressed;
     public abstract float VerticalInput { get; protected set; }
     public abstract float HorizontalInput { get; protected set; }
     protected abstract void CalculateMovementInputs();

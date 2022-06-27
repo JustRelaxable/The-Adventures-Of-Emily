@@ -10,6 +10,8 @@ public class ThirdPersonPCInput : ThirdPersonInput
     public bool JumpActive { get; set; } = true;
     public override event Action JumpPressed;
     public override event Action AttackPressed;
+    public override event Action EPressed;
+
     public override float HorizontalInput { get; protected set; }
     public override float VerticalInput { get; protected set; }
     private void Update()
@@ -18,6 +20,7 @@ public class ThirdPersonPCInput : ThirdPersonInput
         CalculateJumpHold();
         CalculateJumpPressed();
         CalculateAttackPressed();
+        CalculateEPressed();
     }
 
     private void CalculateAttackPressed()
@@ -25,6 +28,14 @@ public class ThirdPersonPCInput : ThirdPersonInput
         if (Input.GetMouseButtonDown(0))
         {
             AttackPressed?.Invoke();
+        }
+    }
+
+    private void CalculateEPressed()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            EPressed?.Invoke();
         }
     }
 

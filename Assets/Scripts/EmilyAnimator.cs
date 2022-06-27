@@ -38,6 +38,13 @@ public class EmilyAnimator : MonoBehaviour
 
             animator.SetTrigger("AttackTest");
         };
+        thirdPersonInput.EPressed += () =>
+        {
+            if (animator.GetBool("Pickable"))
+            {
+                animator.SetTrigger("EPressed");
+            }
+        };
     }
 
     private void ThirdPersonInput_JumpPressed()
