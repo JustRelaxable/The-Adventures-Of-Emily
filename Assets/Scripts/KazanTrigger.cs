@@ -4,22 +4,8 @@ using UnityEngine;
 
 public class KazanTrigger : MonoBehaviour
 {
-    [SerializeField] Transform objectsHolder;
-    [SerializeField] GameObject iksir;
-    [SerializeField] GameObject mantar;
-    [SerializeField] GameObject balýk;
-    [SerializeField] GameObject snailShell;
-    [SerializeField] GameObject kemik;
-    private Transform[] objectPoints;
-    private int objectIndex;
-    private void Awake()
-    {
-        objectPoints = new Transform[objectsHolder.childCount];
-        for (int i = 0; i < objectsHolder.childCount; i++)
-        {
-            objectPoints[i] = objectsHolder.GetChild(i);
-        }
-    }
+    [SerializeField] int pickableCount = 6;
+    [SerializeField] GameObject finalPotion;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,13 +19,11 @@ public class KazanTrigger : MonoBehaviour
                 GameObject targetKazanObject = pickableObject.GetComponent<KazanPickable>().targetKazanObject;
                 IncreaseAlpha(targetKazanObject);
                 emilyObjectHoldController.ReleaseObject();
-                /*
-                pickableObject.transform.parent = objectPoints[objectIndex];
-                Debug.Log(objectIndex);
-                objectIndex++;
-                pickableObject.transform.localPosition = Vector3.zero;
-
-                */
+                pickableCount--;
+                if(pickableCount == 0)
+                {
+                    finalPotion.SetActive(true);
+                }
             }
         }
     }

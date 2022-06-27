@@ -8,6 +8,7 @@ TagManager:
   - Ball
   - Projectile
   - FishSpot
+  - FinalPotion
   layers:
   - Default
   - TransparentFX
