@@ -11,7 +11,7 @@ public class TutorialKey : MonoBehaviour
     [SerializeField] ObjectiveUI objectiveUI;
     private void OnTriggerStay(Collider other)
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             keyObjective.ObjectiveCompleted = true;
             keyCollected = true;

@@ -14,7 +14,7 @@ public class RuneCollector : MonoBehaviour
             GameObject runeGameObject = emilyObjectHoldController.GetPickableObject();
             if (runeGameObject == null)
                 return;
-            int runeNumber = runeGameObject.GetComponent<RunePickable>().GetRuneNumber();
+            runeGameObject.GetComponent<RunePickable>().associatedRuneRock.ActivateRuneRock();
             runeCount--;
             emilyObjectHoldController.ReleaseObject();
             if(runeCount == 0)

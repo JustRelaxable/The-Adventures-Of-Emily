@@ -38,7 +38,7 @@ public class TutorialDoor : MonoBehaviour
             doorAnimator.SetTrigger("OpenDoor");
         }*/
 
-        if(tutorialKey.KeyCollected && Input.GetMouseButtonDown(0))
+        if(tutorialKey.KeyCollected && Input.GetKeyDown(KeyCode.E))
         {
             doorAnimator.SetTrigger("OpenDoor");
             AudioSource.PlayClipAtPoint(doorsound, transform.position);

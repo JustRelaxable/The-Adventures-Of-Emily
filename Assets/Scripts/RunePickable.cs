@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RunePickable : MonoBehaviour,IPickable
 {
-    [SerializeField] int runeNumber;
+    public RuneRock associatedRuneRock;
 
     public void PerformPickAction()
     {
@@ -13,10 +13,5 @@ public class RunePickable : MonoBehaviour,IPickable
         {
             Destroy(rigidbody);
         }
-    }
-
-    public int GetRuneNumber()
-    {
-        return runeNumber;
     }
 }
