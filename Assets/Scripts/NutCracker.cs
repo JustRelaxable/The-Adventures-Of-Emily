@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class NutCracker : MonoBehaviour,IAttackable
+public class NutCracker : MonoBehaviour,IAttackable,IHitPoints
 {
     public float EmilyTargetRadius { get => emilyTargetRadius; }
     public float AttackDistance { get=>attackDistance; }
     public NutCrackerSword NutCrackerSword { get => nutCrackerSword; }
+
+    public int HitPoints => attackPoint;
 
     [SerializeField] int attackPoint;
     [SerializeField] float attackDistance;
