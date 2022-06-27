@@ -26,6 +26,8 @@ public class EmilyAnimator : MonoBehaviour
         thirdPersonInput.JumpPressed += ThirdPersonInput_JumpPressed;
         thirdPersonInput.AttackPressed += () =>
         {
+            if (animator.GetBool("HoldingItem"))
+                return;
             if (!EmilyAttackEnabled)
                 return;
             if (EmilyParalysed)

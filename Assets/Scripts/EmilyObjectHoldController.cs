@@ -33,6 +33,7 @@ public class EmilyObjectHoldController : MonoBehaviour
         pickableObject.transform.localPosition = Vector3.zero;
         pickableObject.transform.localRotation = Quaternion.identity;
         yastýkRenderer.enabled = false;
+        GetComponent<EmilyAnimator>().SetBool("HoldingItem", true);
     }
 
     public void ReleaseObject()
@@ -47,5 +48,6 @@ public class EmilyObjectHoldController : MonoBehaviour
         {
             yastýkRenderer.enabled = true;
         }
+        GetComponent<EmilyAnimator>().SetBool("HoldingItem", false);
     }
 }
