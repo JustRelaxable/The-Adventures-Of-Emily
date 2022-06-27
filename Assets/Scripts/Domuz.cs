@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 
 
-public class Domuz : MonoBehaviour,IAttackable
+public class Domuz : MonoBehaviour,IAttackable,IHitPoints
 {
     [SerializeField] Transform rockTransform;
     [SerializeField] GameObject rockPrefab;
@@ -19,6 +19,8 @@ public class Domuz : MonoBehaviour,IAttackable
     private Animator animator;
     private GameObject emily;
     private GameObject instantiatedRock;
+
+    public int HitPoints => domuzHitPoint;
 
     private void Awake()
     {
