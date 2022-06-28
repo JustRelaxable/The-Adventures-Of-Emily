@@ -7,10 +7,12 @@ public class Kurek : MonoBehaviour, IPickable
     [SerializeField] int digCount = 3;
     [SerializeField] GameObject[] digObjects;
     private GameObject emily;
+    private EmilyAnimator emilyAnimator;
     public void PerformPickAction()
     {
         emily = GameObject.FindGameObjectWithTag("Player");
-        emily.GetComponentInChildren<EmilyAnimator>().isDig = true;
+        emilyAnimator = emily.GetComponentInChildren<EmilyAnimator>();
+        //emily.GetComponentInChildren<EmilyAnimator>().isDig = true;
         emily.GetComponent<ThirdPersonInput>().AttackPressed += Kurek_AttackPressed;
     }
 
@@ -18,10 +20,11 @@ public class Kurek : MonoBehaviour, IPickable
     {
         digCount--;
         Destroy(digObjects[digCount].gameObject);
+        emilyAnimator.SetTrigger("Dig");
         if (digCount == 0)
         {
             emily.GetComponentInChildren<EmilyObjectHoldController>().ReleaseObject();
-            emily.GetComponentInChildren<EmilyAnimator>().isDig = false;
+            //emily.GetComponentInChildren<EmilyAnimator>().isDig = false;
         }
     }
 }

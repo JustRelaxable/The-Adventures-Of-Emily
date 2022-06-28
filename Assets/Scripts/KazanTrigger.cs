@@ -13,7 +13,7 @@ public class KazanTrigger : MonoBehaviour
         {
             EmilyAnimator emilyAnimator = other.gameObject.GetComponentInChildren<EmilyAnimator>();
             EmilyObjectHoldController emilyObjectHoldController = other.gameObject.GetComponentInChildren<EmilyObjectHoldController>();
-            if (emilyAnimator.TargetGameObject != null)
+            if (emilyObjectHoldController.GetPickableObject() != null)
             {
                 GameObject pickableObject = emilyObjectHoldController.GetPickableObject();
                 GameObject targetKazanObject = pickableObject.GetComponent<KazanPickable>().targetKazanObject;

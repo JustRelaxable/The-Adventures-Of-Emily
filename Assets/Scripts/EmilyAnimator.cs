@@ -42,7 +42,7 @@ public class EmilyAnimator : MonoBehaviour
         };
         thirdPersonInput.EPressed += () =>
         {
-            if (animator.GetBool("Pickable"))
+            if (animator.GetBool("Pickable") || animator.GetBool("Fishable"))
             {
                 animator.SetTrigger("EPressed");
             }
@@ -105,6 +105,11 @@ public class EmilyAnimator : MonoBehaviour
     public void SetBool(string boolKey, bool value)
     {
         animator.SetBool(boolKey, value);
+    }
+
+    public void SetTrigger(string triggerKey)
+    {
+        animator.SetTrigger(triggerKey);
     }
 
     public void PickUp()

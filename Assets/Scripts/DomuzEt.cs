@@ -8,5 +8,6 @@ public class DomuzEt : MonoBehaviour, IPickable
     {
         GetComponent<Rigidbody>().isKinematic = true;
         GetComponent<Rigidbody>().useGravity = false;
+        transform.localScale = transform.localScale / 2;
     }
 }
