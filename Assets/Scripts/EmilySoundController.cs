@@ -10,6 +10,7 @@ public class EmilySoundController : MonoBehaviour
     private AudioClip[] jumpClips;
 
     private AudioSource audioSource;
+    [SerializeField] AudioSource emilyJumpAudioSource;
     private TerrainTextureData terrainTextureData;
 
     [SerializeField] EmilyAnimator emilyAnimator;
@@ -26,7 +27,7 @@ public class EmilySoundController : MonoBehaviour
     private void ThirdPersonMovement_OnJump()
     {
         AudioClip clip = GetRandomJumpClip();
-        audioSource.PlayOneShot(clip);
+        emilyJumpAudioSource.PlayOneShot(clip);
     }
 
     private void EmilyAnimator_OnStepped()
